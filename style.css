@@ -1,220 +1,226 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Fundo mais escuro para um visual mais elegante */
+    color: white; /* Texto branco por padrão */
 }
 
 .main {
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(irs\ background.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 109vh;
-}
-.navbar {
-    width: 200px;
-    float: left;
-    height: 70px;
-}
-.logo {
-    color: 	#89cff0;
-    font-size: 35px;
-    font-family: Arial;
-    padding-left: 70px;
-    float: left;
-    padding-top: 20px;
-
-}
-.menu {
-    width: 400px;
-    float: left;
-    height: 70px;
-}
-ul {
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-ul li {
-    list-style: none;
-    margin-left: 50px;
-    margin-top: 7px;
-    font-size: 14px;
-}
-
-
-
-ul li a {
-    text-decoration:none ;
-    color: #fff;
-    font-family: Arial;
-    font-weight: bold;
-    transition: 0.4s ease-in-out;
-
-}
-ul li a:hover{
-    color: #89cff0;
-}
-.search {
-    width: 330px; ;
-    float: left;
-    margin-left: 970px;
-    margin-top: -60px;
-
-}
-.srch{
-    font-family: 'Times New Roman';
-    width: 220px;
-    height: 40px;
-    background: transparent;
-    border: 1px #89cff0;
-    margin-top: 13px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('irs background.jpg') center/cover no-repeat;
     color: white;
-    border-right: none;
-    font-size: 16px;
-    float: left;
-    padding: 10px;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
-}
-.btn {
-    width: 100px;
-    height: 40px;
-    background: #89cff0;
-    border: 2px solid #89cff0;
-    margin-top: 13px;
-    color: white;
-    font-size: 15px;
-    border-bottom-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-
-}
-.btn:focus{
-    outline: none;
-}
-.srch:focus{
-    outline: none;
-}
-.content{
-    width: 1200px;
-    height: auto;
-    margin: auto;
-    color: white;
+    height: 100vh;
     position: relative;
+}
 
+/* Estilos da barra de navegação */
+.navbar {
+    width: 100%;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
 }
-.content .par{
-    padding-left: 60px;
-    padding-bottom: 25px;
-    font-family: Arial;
-    letter-spacing: 1.2px;
-    line-height: 30px;
-}
-.content h1{
-    font-family: 'Times New Roman';
-    font-size: 50px;
-    padding-left: 60px;
-    margin-top: 9%;
-    letter-spacing: 2px;
-}
-.content .cn {
-    width: 160px;
-    height: 40px;
-    background: #89cff0;
-    border: none;
-    margin-bottom: 10px;
-    margin-left: 60px;
-    font-size: 18px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .4s ease;
 
-}
-.content .cn a{
-    text-decoration: none;
-    color: black;
-    transition: .3s ease;
-}
-.cn:hover{
-    background-color: white;
-
-}
-.form{
-    width: 250px;
-    height: 380px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8)50%, rgba(0,0,0,0.8)50%);
-    position: absolute;
-    top: 40px;
-    left: 1200px;
-    border-radius: 10px;
-    padding: 25px;
-
-}
-.form h2{
-    width: 220px;
-    font-family: sans-serif;
-    text-align: center;
+.logo {
+    font-size: 35px;
     color: #89cff0;
-    font-size: 22px;
-    background-color: white;
-    border-radius: 10px;
-    margin: 2px;
-    padding: 8px;
-}
-.form input{
-    width: 240px;
-    height: 35px;
-    background: transparent;
-    border-bottom: 1px solid #89cff0;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    color: white;
-    font-size: 15px;
     letter-spacing: 1px;
-    margin-top: 30px;
-    font-family: sans-serif;
+    transition: color 0.3s;
 }
-.form input:focus{
-    outline: none;
-}
-::placeholder{
-    color: white;
-    font-family: Arial;
 
+.logo:hover {
+    color: #5bc0de; /* Cor ao passar o mouse */
 }
-.btnn{
-    width: 240px;
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li {
+    margin: 0 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s; /* Adiciona animação ao hover */
+}
+
+.menu ul li a:hover {
+    color: #89cff0;
+    transform: scale(1.1); /* Efeito de escala ao passar o mouse */
+}
+
+.search {
+    margin-left: auto;
+}
+
+.srch {
+    font-family: Arial, sans-serif;
+    width: 220px;
+    height: 40px;
+    border: 1px solid #89cff0;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    background: transparent;
+    color: white;
+    transition: border-color 0.3s; /* Transição suave */
+}
+
+.srch:focus {
+    border-color: #5bc0de; /* Mudança de cor ao focar */
+}
+
+.btn {
     height: 40px;
     background: #89cff0;
     border: none;
-    margin-top: 30px;
-    font-size: 18px;
+    color: white;
+    padding: 0 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
 }
-.btnn:hover{
+
+.btn:hover {
     background: white;
     color: #89cff0;
-
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
 }
-.btnn a{
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
 
-}
-.form .link{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 17px;
-    padding-top: 20px;
+.content {
     text-align: center;
-
+    padding-top: 150px;
 }
-.form .link a{
-    text-decoration: none;
+
+.content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease forwards; /* Animação para o título */
+}
+
+.content .par {
+    font-size: 18px;
+    margin: 20px auto;
+    max-width: 600px;
+    color: #c0c0c0; /* Cor de texto para parágrafo */
+}
+
+.cn {
+    background: #89cff0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.cn:hover {
+    background: white;
     color: #89cff0;
 }
-.liw{
-padding-top: 15px;
-padding-bottom: 10px;
-text-align: center;
+
+/* Estilos para a seção de login */
+.form {
+    width: 250px;
+    background: rgba(0, 0, 0, 0.8); /* Fundo escuro translúcido */
+    padding: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 60%; /* Ajusta para ficar mais para baixo */
+    right: 5%; /* Posiciona mais à direita */
+    color: white;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+    animation: slideIn 0.5s ease forwards; /* Animação para a entrada do formulário */
+}
+
+.form h2 {
+    color: #89cff0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    background: rgba(255, 255, 255, 0.1); /* Fundo translúcido para inputs */
+    color: white;
+    border: 1px solid #89cff0;
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Transição suave */
+}
+
+.form input::placeholder {
+    color: #c0c0c0;
+}
+
+.form .btn {
+    width: 100%;
+    padding: 10px;
+    background: #89cff0;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.form .btn:hover {
+    background: white;
+    color: #89cff0;
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+}
+
+.link, .link a {
+    color: #89cff0;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    transition: color 0.3s; /* Transição suave */
+}
+
+.link a:hover {
+    color: #5bc0de; /* Mudança de cor ao passar o mouse */
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
