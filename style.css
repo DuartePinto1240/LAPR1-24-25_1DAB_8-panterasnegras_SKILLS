@@ -1,204 +1,205 @@
-/* Configurações básicas de estilo */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    /* Se você quiser uma imagem de fundo, descomente a linha abaixo e substitua a URL */
-    /* background-image: url('URL_DA_SUA_IMAGEM'); */
-    background-color: #000; /* Fundo preto, se você quiser um fundo sólido */
-    color: #333;
-    background-size: cover; /* Para cobrir toda a tela */
-    background-position: center; /* Para centralizar a imagem de fundo */
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Fundo mais escuro para um visual mais elegante */
+    color: white; /* Texto branco por padrão */
 }
 
-/* Container principal */
 .main {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('irs background.jpg') center/cover no-repeat;
+    color: white;
+    height: 100vh;
+    position: relative;
 }
 
-/* Barra de navegação */
+/* Estilos da barra de navegação */
 .navbar {
+    width: 100%;
+    padding: 15px 50px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.8); /* Preto semi-transparente para a barra de navegação */
-    padding: 20px 50px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
 }
 
-.icon .logo {
-    color: #5cb85c; /* Verde claro para o logo */
-    font-size: 26px;
-    font-weight: 700;
+.logo {
+    font-size: 35px;
+    color: #89cff0;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.logo:hover {
+    color: #5bc0de; /* Cor ao passar o mouse */
 }
 
 .menu ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+}
+
+.menu ul li {
+    margin: 0 20px;
 }
 
 .menu ul li a {
-    color: #ffffff; /* Texto branco */
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s; /* Adiciona animação ao hover */
 }
 
 .menu ul li a:hover {
-    background-color: #5cb85c; /* Verde claro ao passar o mouse */
+    color: #89cff0;
+    transform: scale(1.1); /* Efeito de escala ao passar o mouse */
 }
 
-/* Caixa de pesquisa */
 .search {
-    display: flex;
-    align-items: center;
+    margin-left: auto;
 }
 
 .srch {
-    padding: 10px 14px;
-    border-radius: 25px;
-    border: 1px solid #ccc;
-    outline: none;
-    transition: border-color 0.3s ease;
+    font-family: Arial, sans-serif;
+    width: 220px;
+    height: 40px;
+    border: 1px solid #89cff0;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    background: transparent;
+    color: white;
+    transition: border-color 0.3s; /* Transição suave */
 }
 
 .srch:focus {
-    border-color: #5cb85c; /* Verde claro ao focar */
+    border-color: #5bc0de; /* Mudança de cor ao focar */
 }
 
 .btn {
-    margin-left: 12px;
-    padding: 10px 18px;
+    height: 40px;
+    background: #89cff0;
     border: none;
-    border-radius: 25px;
-    background-color: #5cb85c; /* Verde claro */
-    color: #fff;
+    color: white;
+    padding: 0 15px;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s;
+    transition: background 0.3s ease, transform 0.2s;
 }
 
 .btn:hover {
-    background-color: #4cae4c; /* Tom escuro de verde */
-    transform: scale(1.05); /* Animação de escala */
+    background: white;
+    color: #89cff0;
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
 }
 
-/* Área do conteúdo principal */
 .content {
     text-align: center;
-    padding: 60px 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente para melhor legibilidade */
-    border-radius: 10px; /* Bordas arredondadas */
-    margin: 20px; /* Margem para separar do fundo */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    padding-top: 150px;
 }
 
 .content h1 {
-    font-size: 38px;
-    margin-bottom: 24px;
-    color: #000; /* Preto para o título */
-    font-weight: 700;
-    animation: fadeIn 1s ease forwards; /* Animação ao entrar */
+    font-size: 50px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease forwards; /* Animação para o título */
 }
 
-.content h1 span {
-    color: #5cb85c; /* Verde claro para destaque */
-}
-
-.par {
+.content .par {
     font-size: 18px;
-    color: #666;
-    line-height: 1.8;
-    max-width: 850px;
-    margin: 0 auto 40px;
+    margin: 20px auto;
+    max-width: 600px;
+    color: #c0c0c0; /* Cor de texto para parágrafo */
 }
 
-/* Área do Login */
+.cn {
+    background: #89cff0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.cn:hover {
+    background: white;
+    color: #89cff0;
+}
+
+/* Estilos para a seção de login */
 .form {
-    position: fixed;
-    top: 50%;
-    right: 3%;
-    width: 300px;
-    padding: 25px;
-    background-color: rgba(255, 255, 255, 0.95);
+    width: 250px;
+    background: rgba(0, 0, 0, 0.8); /* Fundo escuro translúcido */
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 60%; /* Ajusta para ficar mais para baixo */
+    right: 5%; /* Posiciona mais à direita */
+    color: white;
     transform: translateY(-50%); /* Centraliza verticalmente */
-    animation: slideIn 0.5s ease forwards; /* Animação de entrada */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+    animation: slideIn 0.5s ease forwards; /* Animação para a entrada do formulário */
 }
 
 .form h2 {
-    font-size: 22px;
-    color: #000; /* Preto para o título do login */
-    margin-bottom: 15px;
+    color: #89cff0;
+    margin-bottom: 20px;
+    font-size: 20px;
     text-align: center;
 }
 
-.form input[type="email"],
-.form input[type="password"] {
+.form input {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.form input[type="email"]:focus,
-.form input[type="password"]:focus {
-    border-color: #5cb85c; /* Verde claro ao focar */
-}
-
-.form .login-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #5cb85c; /* Verde claro */
-    border: none;
+    margin: 15px 0;
+    background: rgba(255, 255, 255, 0.1); /* Fundo translúcido para inputs */
     color: white;
-    font-weight: bold;
+    border: 1px solid #89cff0;
     border-radius: 5px;
+    transition: border-color 0.3s; /* Transição suave */
+}
+
+.form input::placeholder {
+    color: #c0c0c0;
+}
+
+.form .btn {
+    width: 100%;
+    padding: 10px;
+    background: #89cff0;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s;
+    transition: background 0.3s ease, transform 0.2s;
 }
 
-.form .login-btn:hover {
-    background-color: #4cae4c; /* Tom escuro de verde */
-    transform: scale(1.05); /* Animação de escala */
+.form .btn:hover {
+    background: white;
+    color: #89cff0;
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
 }
 
-/* Estilos para lista de funcionalidades */
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 25px 0;
+.link, .link a {
+    color: #89cff0;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    transition: color 0.3s; /* Transição suave */
 }
 
-ul li {
-    margin-bottom: 12px;
-    padding-left: 24px;
-    position: relative;
-}
-
-ul li::before {
-    content: "•";
-    color: #5cb85c; /* Verde claro */
-    position: absolute;
-    left: 0;
-    font-size: 24px;
+.link a:hover {
+    color: #5bc0de; /* Mudança de cor ao passar o mouse */
 }
 
 /* Animações */
@@ -221,33 +222,5 @@ ul li::before {
     to {
         opacity: 1;
         transform: translateX(0);
-    }
-}
-
-/* Responsividade para mobile */
-@media (max-width: 768px) {
-    .menu ul {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    
-    .navbar {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    .content h1 {
-        font-size: 30px;
-    }
-
-    .par {
-        font-size: 16px;
-    }
-
-    .form {
-        position: static;
-        margin: 20px auto;
-        max-width: 90%;
     }
 }
