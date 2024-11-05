@@ -136,16 +136,15 @@ body {
 /* Estilos para a seção de login */
 .form {
     width: 250px;
-    background: rgba(0, 0, 0, 0.8); /* Fundo escuro translúcido */
+    background: rgba(0, 0, 0, 0.7);
     padding: 30px;
     border-radius: 10px;
     position: absolute;
-    top: 60%; /* Ajusta para ficar mais para baixo */
-    right: 5%; /* Posiciona mais à direita */
+    top: 50%; /* Ajustado para ficar mais para cima */
+    right: 5%;
     color: white;
-    transform: translateY(-50%); /* Centraliza verticalmente */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
-    animation: slideIn 0.5s ease forwards; /* Animação para a entrada do formulário */
+    transform: translateY(-50%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .form h2 {
@@ -224,3 +223,87 @@ body {
         transform: translateX(0);
     }
 }
+/* Estilos para o Rodapé */
+.footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 20px 0;
+    font-size: 14px;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-info {
+    max-width: 70%;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #89cff0;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-contact {
+    font-size: 13px;
+    color: #c0c0c0;
+}
+
+/* Redes Sociais */
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    filter: grayscale(1);
+    transition: filter 0.3s;
+}
+
+.social-icon:hover {
+    filter: grayscale(0);
+}
+
+.social-link {
+    color: #89cff0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.social-link:hover {
+    color: white;
+}
+
