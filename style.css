@@ -6,20 +6,19 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: white;
+    background-color: #121212; /* Fundo mais escuro para um visual mais elegante */
+    color: white; /* Texto branco por padrão */
 }
 
 .main {
     width: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('irs background.jpg') center/cover no-repeat;
     color: white;
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
-    padding-bottom: 120px; /* Espaço para o rodapé */
 }
 
-/* Barra de Navegação */
+/* Estilos da barra de navegação */
 .navbar {
     width: 100%;
     padding: 15px 50px;
@@ -27,15 +26,18 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
 }
 
-/* Estilos da Logo e Menu */
 .logo {
     font-size: 35px;
     color: #89cff0;
     letter-spacing: 1px;
     transition: color 0.3s;
+}
+
+.logo:hover {
+    color: #5bc0de; /* Cor ao passar o mouse */
 }
 
 .menu ul {
@@ -51,7 +53,12 @@ body {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    transition: color 0.3s ease, transform 0.2s;
+    transition: color 0.3s ease, transform 0.2s; /* Adiciona animação ao hover */
+}
+
+.menu ul li a:hover {
+    color: #89cff0;
+    transform: scale(1.1); /* Efeito de escala ao passar o mouse */
 }
 
 .search {
@@ -59,6 +66,7 @@ body {
 }
 
 .srch {
+    font-family: Arial, sans-serif;
     width: 220px;
     height: 40px;
     border: 1px solid #89cff0;
@@ -66,9 +74,13 @@ body {
     border-radius: 5px 0 0 5px;
     background: transparent;
     color: white;
+    transition: border-color 0.3s; /* Transição suave */
 }
 
-/* Botão */
+.srch:focus {
+    border-color: #5bc0de; /* Mudança de cor ao focar */
+}
+
 .btn {
     height: 40px;
     background: #89cff0;
@@ -77,30 +89,139 @@ body {
     padding: 0 15px;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
 }
 
-/* Seção de Conteúdo */
+.btn:hover {
+    background: white;
+    color: #89cff0;
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+}
+
 .content {
     text-align: center;
-    padding-top: 100px; /* Aumentado para melhor posicionamento */
+    padding-top: 150px;
 }
 
 .content h1 {
     font-size: 50px;
     margin-bottom: 20px;
     letter-spacing: 2px;
+    animation: fadeIn 1s ease forwards; /* Animação para o título */
 }
 
-/* Barra de Login */
+.content .par {
+    font-size: 18px;
+    margin: 20px auto;
+    max-width: 600px;
+    color: #c0c0c0; /* Cor de texto para parágrafo */
+}
+
+.cn {
+    background: #89cff0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.cn:hover {
+    background: white;
+    color: #89cff0;
+}
+
+/* Estilos para a seção de login */
 .form {
     width: 250px;
     background: rgba(0, 0, 0, 0.7);
     padding: 30px;
     border-radius: 10px;
     position: absolute;
-    top: 30%; /* Ajustado para não cobrir o rodapé */
+    top: 50%; /* Ajustado para ficar mais para cima */
     right: 5%;
     color: white;
     transform: translateY(-50%);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
+
+.form h2 {
+    color: #89cff0;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    background: rgba(255, 255, 255, 0.1); /* Fundo translúcido para inputs */
+    color: white;
+    border: 1px solid #89cff0;
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Transição suave */
+}
+
+.form input::placeholder {
+    color: #c0c0c0;
+}
+
+.form .btn {
+    width: 100%;
+    padding: 10px;
+    background: #89cff0;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.form .btn:hover {
+    background: white;
+    color: #89cff0;
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
+}
+
+.link, .link a {
+    color: #89cff0;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    transition: color 0.3s; /* Transição suave */
+}
+
+.link a:hover {
+    color: #5bc0de; /* Mudança de cor ao passar o mouse */
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
