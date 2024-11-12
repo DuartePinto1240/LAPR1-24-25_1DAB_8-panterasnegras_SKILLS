@@ -29,6 +29,8 @@ body {
     height: 400px;
     border-radius: 10px; /* Adiciona bordas arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar a imagem */
+    right: 400px
+    top: 200px
 }   
 
 /* Estilos da barra de navegação */
