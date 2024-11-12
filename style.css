@@ -18,6 +18,14 @@ body {
     position: relative;
 }
 
+.fotoirs {
+    width: 700px;
+    height: 400px;
+    position: relative;
+    right: 300px; 
+    top: 200px
+}    
+
 /* Estilos da barra de navegação */
 .navbar {
     width: 100%;
