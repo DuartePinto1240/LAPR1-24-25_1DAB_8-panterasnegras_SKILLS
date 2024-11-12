@@ -18,13 +18,18 @@ body {
     position: relative;
 }
 
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; /* Espaçamento superior para separar a imagem do texto */
+}
+
 .fotoirs {
     width: 700px;
     height: 400px;
-    position: relative;
-    right: 300px; 
-    top: 200px
-}    
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar a imagem */
+}   
 
 /* Estilos da barra de navegação */
 .navbar {
