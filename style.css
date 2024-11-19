@@ -50,7 +50,7 @@ body {
 }
 
 .menu ul li a {
-    text-decoration: none;
+    text-decoration: black;
     color: white;
     font-weight: bold;
     transition: color 0.3s ease, transform 0.2s; /* Adiciona animação ao hover */
