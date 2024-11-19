@@ -316,3 +316,60 @@ body {
     color: white;
 }
 
+.layout-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 40px;
+    gap: 20px;
+}
+
+/* Estilo para a área de texto */
+.texto {
+    flex: 1;
+    max-width: 55%; /* Limita o texto a ocupar 55% do espaço */
+    color: white;
+}
+
+.texto h1, .texto h2 {
+    color: #89cff0; /* Cor para títulos */
+    margin-bottom: 15px;
+}
+
+.texto p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #c0c0c0; /* Cinza claro para texto */
+}
+
+/* Estilo para a área de imagem */
+.imagem {
+    flex: 1;
+    max-width: 40%; /* Limita a imagem a 40% do espaço */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.imagem img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para a imagem */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .layout-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .texto, .imagem {
+        max-width: 100%;
+    }
+    .imagem {
+        justify-content: center;
+    }
+}
