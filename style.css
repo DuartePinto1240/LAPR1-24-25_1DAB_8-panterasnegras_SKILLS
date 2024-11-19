@@ -104,26 +104,28 @@ body {
 }
 
 .fotoirs {
-    width: 400px;
-    height: auto; /* Mantém a proporção da imagem */
-    float: right; /* Posiciona a imagem à direita do texto */
-    margin: 0 0 20px 20px; /* Adiciona espaçamento entre o texto e a imagem */
-    border-radius: 10px; /* Adiciona bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar a imagem */
+    width: 600px; /* Aumentar largura da imagem */
+    height: auto; 
+    float: right; 
+    margin: 0 0 20px 20px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .content h1 {
     font-size: 50px;
     margin-bottom: 20px;
     letter-spacing: 2px;
-    animation: fadeIn 1s ease forwards; /* Animação para o título */
+    color: #89cff0; /* Azul */
+    animation: fadeIn 1s ease forwards;
 }
 
+/* Alinhar texto mais à direita */
 .content .par {
     font-size: 18px;
-    margin: 20px auto;
+    margin: 20px auto 20px 50px; /* Ajuste do margin-left */
     max-width: 600px;
-    color: #c0c0c0; /* Cor de texto para parágrafo */
+    color: #c0c0c0; 
 }
 
 .cn {
