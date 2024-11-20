@@ -159,7 +159,7 @@ body {
     padding: 30px;
     border-radius: 10px;
     position: absolute;
-    top: 50%; /* Ajustado para ficar mais para cima */
+    top: 70%; /* Ajustado para ficar mais para cima */
     right: 5%;
     color: white;
     transform: translateY(-50%);
