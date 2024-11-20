@@ -391,3 +391,52 @@ body {
     border-radius: 10px; /* Adiciona bordas arredondadas */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar a imagem */
 }
+
+.contactos {
+    position: relative;
+    display: flex; /* Torna o contêiner flexível para centralização */
+    flex-direction: column; /* Empilha elementos verticalmente */
+    justify-content: flex-start; /* Centraliza verticalmente no topo */
+    align-items: center; /* Centraliza horizontalmente */
+    padding: 20px;
+    height: 100vh; /* Garante que ocupa a altura total da janela */
+    text-align: center; /* Centraliza o texto dentro dos elementos */
+}
+
+.contactos h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: #89cff0;
+    animation: fadeIn 1s ease forwards; /* Animação opcional */
+}
+
+.contactos h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: #89cff0;
+}
+
+.contactos .par {
+    font-size: 18px;
+    margin: 20px auto;
+    max-width: 600px;
+    color: #ffffff; /* Texto mais escuro para melhor leitura */
+}
+
+.contactos ul {
+    list-style: none; /* Remove marcadores de lista */
+    padding: 0;
+    margin: 20px 0;
+}
+
+.contactos ul li {
+    font-size: 18px;
+    color: #ffffff; /* Tom intermediário para texto */
+    margin-bottom: 10px;
+}
+
+.contactos ul li strong {
+    color: #89cff0; /* Destaque para títulos dentro dos itens da lista */
+}
