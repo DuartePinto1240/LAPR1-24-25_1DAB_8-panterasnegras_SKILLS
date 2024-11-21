@@ -453,7 +453,7 @@ body {
 
 .gallery-item {
     width: 30%; /* Cada imagem ocupa cerca de 30% do espaço total */
-    max-width: 400px; /* Limita a largura máxima */
+    max-width: 450px; /* Limita a largura máxima */
     height: auto; /* Ajusta a altura automaticamente */
     object-fit: cover; /* Garante ajuste proporcional */
     cursor: pointer;
