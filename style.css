@@ -443,25 +443,39 @@ body {
 }
 .gallery {
     display: flex;
-    justify-content: center; /* Centraliza as imagens */
-    align-items: center; /* Centraliza verticalmente, se necessário */
-    gap: 20px; /* Define um espaçamento consistente entre as imagens */
-    flex-wrap: wrap; /* Permite que as imagens quebrem de linha */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    align-items: flex-start; /* Alinha as imagens pelo topo */
+    gap: 20px; /* Espaçamento entre as imagens */
+    flex-wrap: nowrap; /* Garante que as imagens fiquem lado a lado (sem quebra de linha) */
     padding: 20px;
+    overflow-x: auto; /* Permite rolagem horizontal, se necessário */
 }
 
 .gallery-item {
-    width: 375px; /* Define uma largura fixa para todas as imagens */
-    height: 250px; /* Define uma altura fixa */
-    object-fit: cover; /* Garante que a imagem se ajuste ao tamanho definido sem distorções */
+    width: 30%; /* Cada imagem ocupa cerca de 30% do espaço total */
+    max-width: 400px; /* Limita a largura máxima */
+    height: auto; /* Ajusta a altura automaticamente */
+    object-fit: cover; /* Garante ajuste proporcional */
     cursor: pointer;
     transition: transform 0.2s;
-    border: 2px solid #ccc; /* Opcional: Adiciona uma borda para destacar */
-    border-radius: 5px; /* Opcional: Bordas arredondadas */
+    border: 2px solid #ccc; /* Bordas para destaque */
+    border-radius: 5px;
 }
+
 
 .gallery-item:hover {
     transform: scale(1.05); /* Aumenta ligeiramente no hover */
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+    }
+
+    .gallery-item {
+        width: 100%; /* Cada imagem ocupa toda a largura disponível */
+        max-width: none;
+    }
 }
 
 .modal {
