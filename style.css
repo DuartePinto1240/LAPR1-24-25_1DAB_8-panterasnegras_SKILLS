@@ -442,20 +442,26 @@ body {
     color: #89cff0; /* Destaque para títulos dentro dos itens da lista */
 }
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
+    display: flex;
+    justify-content: center; /* Centraliza as imagens */
+    align-items: center; /* Centraliza verticalmente, se necessário */
+    gap: 20px; /* Define um espaçamento consistente entre as imagens */
+    flex-wrap: wrap; /* Permite que as imagens quebrem de linha */
     padding: 20px;
 }
 
 .gallery-item {
-    width: 100%;
+    width: 450px; /* Define uma largura fixa para todas as imagens */
+    height: 275px; /* Define uma altura fixa */
+    object-fit: cover; /* Garante que a imagem se ajuste ao tamanho definido sem distorções */
     cursor: pointer;
     transition: transform 0.2s;
+    border: 2px solid #ccc; /* Opcional: Adiciona uma borda para destacar */
+    border-radius: 5px; /* Opcional: Bordas arredondadas */
 }
 
 .gallery-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Aumenta ligeiramente no hover */
 }
 
 .modal {
