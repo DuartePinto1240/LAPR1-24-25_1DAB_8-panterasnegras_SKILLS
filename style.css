@@ -480,7 +480,7 @@ body {
 }
 
 .gallery-item {
-    width: 450px; /* Define uma largura fixa */
+    width: 425px; /* Define uma largura fixa */
     height: 275px; /* Define uma altura fixa */
     object-fit: cover; /* Garante que as imagens se ajustem ao tamanho sem distorções */
     cursor: pointer;
