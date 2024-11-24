@@ -99,10 +99,31 @@ body {
 }
 
 .content {
-    position: relative;
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%);
+    text-align: center; /* Centraliza o texto */
+    width: 100%; /* Garante que o texto não exceda a largura */
     padding: 20px;
-    padding-left: 50px
+    
 }
+
+
+/* Estiliza o texto */
+.content .par {
+    font-size: 18px;
+    margin: 20px auto; /* Mantém a centralização */
+    max-width: 600px; /* Limita a largura */
+    color: #c0c0c0;
+    text-align: center; /* Centraliza o texto */
+    display: block; /* Garante comportamento de bloco */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    transform: translateX(67%); /* Move 10% para a esquerda */
+}
+
+
 
 .fotoirs {
     width: 600px;
@@ -119,22 +140,19 @@ body {
     letter-spacing: 2px;
     color: #89cff0;
     animation: fadeIn 1s ease forwards; /* Animação para o título */
+    text-align: center; /* Centraliza horizontalmente o texto */
 }
 
+/* Ajuste do subtítulo */
 .content h2 {
     font-size: 30px;
     margin-bottom: 10px;
     letter-spacing: 2px;
     color: #89cff0;
+    text-align: center; /* Centraliza horizontalmente */
 }
 
-.content .par {
-    font-size: 18px;
-    margin: 20px auto 20px 50px;
-    margin-left: 30px;
-    max-width: 600px;
-    color: #c0c0c0; /* Cor de texto para parágrafo */
-}
+
 
 .cn {
     background: #89cff0;
@@ -155,16 +173,22 @@ body {
 
 /* Estilos para a seção de login */
 .form {
-    width: 250px;
+    width: 300px; /* Largura da seção de login */
     background: rgba(0, 0, 0, 0.7);
     padding: 30px;
     border-radius: 10px;
     position: absolute;
-    top: 70%; /* Ajustado para ficar mais para cima */
-    right: 5%;
-    color: white;
-    transform: translateY(-50%);
+    bottom: -20%; /* Posição mais próxima da parte inferior */
+    right: 5%; /* Mantém a posição no lado direito */
+    transform: translateY(10%); /* Ajuste de alinhamento fino */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Centraliza o botão "Join Our Community" */
+.form .cn {
+    display: block; /* Faz o botão ocupar toda a linha */
+    margin: 20px auto 0; /* Adiciona espaçamento e centraliza */
+    text-align: center;
 }
 
 .form h2 {
@@ -394,15 +418,19 @@ body {
 }
 
 .contactos {
-    position: relative;
-    display: flex; /* Torna o contêiner flexível para centralização */
+    position: absolute; /* Torna possível posicioná-lo em relação ao viewport */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para alinhar o centro */
+    display: flex; /* Torna o contêiner flexível */
     flex-direction: column; /* Empilha elementos verticalmente */
-    justify-content: flex-start; /* Centraliza verticalmente no topo */
-    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Garante centralização vertical dos itens */
+    align-items: center; /* Garante centralização horizontal dos itens */
     padding: 20px;
-    height: 100vh; /* Garante que ocupa a altura total da janela */
+    height: auto; /* Remove a restrição da altura para adaptar ao conteúdo */
     text-align: center; /* Centraliza o texto dentro dos elementos */
 }
+
 
 .contactos h1 {
     font-size: 50px;
@@ -452,16 +480,14 @@ body {
 }
 
 .gallery-item {
-    width: 30%; /* Cada imagem ocupa cerca de 30% do espaço total */
-    max-width: 450px; /* Limita a largura máxima */
-    height: auto; /* Ajusta a altura automaticamente */
-    object-fit: cover; /* Garante ajuste proporcional */
+    width: 465px; /* Define uma largura fixa */
+    height: 275px; /* Define uma altura fixa */
+    object-fit: cover; /* Garante que as imagens se ajustem ao tamanho sem distorções */
     cursor: pointer;
     transition: transform 0.2s;
     border: 2px solid #ccc; /* Bordas para destaque */
-    border-radius: 5px;
+    border-radius: 5px; /* Opcional: Bordas arredondadas */
 }
-
 
 .gallery-item:hover {
     transform: scale(1.05); /* Aumenta ligeiramente no hover */
@@ -475,6 +501,7 @@ body {
     .gallery-item {
         width: 100%; /* Cada imagem ocupa toda a largura disponível */
         max-width: none;
+        height: auto; /* Altura ajustada para manter a proporção */
     }
 }
 
@@ -505,4 +532,35 @@ body {
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.problemas {
+    position: relative;
+    padding: 20px;
+    padding-left: 50px
+}
+
+
+.problemas h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: #89cff0;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Ajuste do subtítulo */
+.problemas h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: #89cff0;
+}
+
+.content .par {
+    font-size: 18px;
+    margin: 20px auto 20px 50px;
+    margin-left: 30px;
+    max-width: 600px;
+    color: #c0c0c0;
 }
